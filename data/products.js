@@ -93,7 +93,7 @@ obj3.method();
 
 export let products = [];
 
-export function loadProducts(func) {
+export function loadProducts(fun) {
   const xhr = new XMLHttpRequest();
 
   xhr.addEventListener('load', () => {
@@ -106,7 +106,7 @@ export function loadProducts(func) {
 
     console.log('load products');
 
-    func();
+    fun();
   });
 
   xhr.open('GET', 'https://supersimplebackend.dev/products');
